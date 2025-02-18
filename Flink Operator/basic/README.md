@@ -24,11 +24,17 @@ docker push -t hiha2/flink-python-example:1.20
 ```
 
 ### 4. 실행 및 확인
+- 작업 실행
+```
+kubectl apply -f python-example.yaml
+```
+- 작업 확인
+```
+kubectl logs -f deploy/python-example
 
-
-
+kubectl get flinkdeployment
+```
 
 
 ### Ref:
-- https://github.com/apache/flink-kubernetes-operator/tree/main/examples/flink-python-example
-- 
+- https://github.com/apache/flink-kubernetes-operator/tree/main/examples/flink-python-example 
